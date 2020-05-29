@@ -1,0 +1,36 @@
+{% extends "rango/base.html" %}
+{% load static %}
+{% block div_block %}
+    <div class="jumbotron">
+        <h1 class="display-3">Rango say</h1>
+        {% if user.is_authenticated %}
+            hey {{ user.username }}!
+        {% else %}
+            hey there partner!
+        {% endif %}
+    </div>
+    <div class="row marketing">
+        <div class="col-lg-6">
+            <h4>Most liked Categories:</h4>
+            {% if categories %}
+                <ul class="list-group">
+                    {% for category in categories %}
+                        <li class="list-group-item"><a href="{% url "rango:show_category" category.slug  %}">{{ category.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div class="col-lg-6">
+            <h4>Most viewed Pages:</h4>
+            {% if pases %}
+                <ul class="list-group">
+                    {% for pase in pases %}
+                        <li class="list-group-item"><a href="{{ pase.url }}">{{ pase.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+    <img src="{% static "images/rango_pic.png" %}" alt="Picture of Rango" />
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "rango/base.html" %}
+{% load static %}
+{% block title_block %}
+    About rango
+{% endblock %}
+
+{% block div_block %}
+    <h1>About Rango</h1>
+    <div>
+        <p>This tutorial has been put together by <b>Rango</b>.</p>
+        <img src="{{ MEDIA_URL }}images/cat.png" alt="cat" />
+    </div>
+    <br />
+    <button class="btn btn-primary" id="about-btn">
+        Click Me - I'm JavaScript on Speed
+    </button>
+    <br/>
+    <p>This text is for a JQuery Example</p>
+{% endblock %}
