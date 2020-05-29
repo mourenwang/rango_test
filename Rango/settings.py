@@ -24,7 +24,7 @@ SECRET_KEY = 'f3l=^+qidcz*sz$0+yd&3o(d(9y8+*&zbeofv4q#5sf&2^%)cu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://seeyou1900.pythonanywhere.com/']
 
 # Application definition
 
